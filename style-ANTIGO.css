@@ -1,0 +1,210 @@
+body {
+    background-color: #0f0f0f;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/* 2. CABEÇALHO
+   text-align centraliza o texto.
+   padding cria espaço interno entre o conteúdo e a borda. */
+header {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #e60012;
+}
+
+
+/* 3. TÍTULOS */
+h1 {
+    font-size: 28px;
+    color: #ffffff;
+}
+
+
+h2 {
+    color: #e60012;
+    font-size: 24px;
+}
+
+
+/* 4. PARÁGRAFOS
+   line-height controla a distância entre as linhas. */
+p {
+    line-height: 26px;
+}
+
+
+/* 5. LINKS
+   text-decoration retira o sublinhado dos links.
+   font-weight deixa o texto em negrito. */
+a {
+    color: #e60012;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* 6. MENU
+   nav a seleciona somente os links que estão dentro de nav. */
+nav a {
+    color: #ffffff;
+}
+
+
+nav a:hover {
+    color: #e60012;
+}
+
+
+/* nav ul seleciona a lista dentro do menu.
+   list-style-type: none retira os marcadores da lista.
+   Os itens continuam um abaixo do outro. */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+nav li {
+    margin: 10px;
+}
+
+
+/* 7. CONTEÚDO PRINCIPAL */
+main {
+    padding: 20px;
+}
+
+
+/* Cada section recebe um fundo escuro e espaço ao redor.
+   border precisa de espessura, estilo e cor.
+   border-radius arredonda os cantos. */
+section {
+    background-color: #1a1a1a;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #333333;
+    border-radius: 8px;
+}
+
+
+/* 8. TABELA
+   border-collapse une as bordas das células. */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+caption {
+    font-weight: bold;
+    padding: 10px;
+    color: #ffffff;
+}
+
+
+/* A vírgula aplica a mesma regra a th e td. */
+th, td {
+    border: 1px solid #333333;
+    padding: 10px;
+    text-align: left;
+}
+
+
+th {
+    background-color: #301961;
+    color: #ffffff;
+}
+
+
+tfoot {
+    background-color: #222222;
+}
+
+
+/* 9. FORMULÁRIOS
+   fieldset agrupa os campos; legend é o título desse grupo. */
+fieldset {
+    border: 1px solid #333333;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+
+legend {
+    color: #e60012;
+    font-weight: bold;
+}
+
+
+label {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+form {
+    background-color: #1a1a1a;
+    width: 400px;
+    padding: 20px;
+    margin: 30px auto;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+/* Mantemos o tamanho natural dos campos e das caixas de seleção. */
+input, select, textarea {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #0f0f0f;
+    color: #ffffff;
+}
+
+
+select, textarea, input {
+    padding: 8px;
+    border: 1px solid #444444;
+    border-radius: 4px;
+}
+
+
+/* 10. BOTÕES */
+button {
+    background-color: #e60012;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid #e60012;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+button:hover {
+    background-color: #b3000e;
+    border-color: #b3000e;
+}
+
+
+/* 11. RODAPÉ */
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #e60012;
+}
+
+
+footer a {
+    color: #e60012;
+}

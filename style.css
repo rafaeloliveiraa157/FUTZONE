@@ -1,0 +1,324 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #0b0b0d;
+    background-image:
+        linear-gradient(rgba(230, 0, 18, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(230, 0, 18, 0.08) 1px, transparent 1px);
+    background-size: 60px 60px;
+    color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Faixa vermelha animada no fundo */
+body::before {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+        transparent 20%,
+        rgba(230, 0, 18, 0.18) 50%,
+        transparent 80%
+    );
+    animation: faixa-vermelha 7s linear infinite;
+}
+
+@keyframes faixa-vermelha {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(100%);
+    }
+}
+
+/* CABEÇALHO */
+
+header {
+    padding: 25px 20px;
+    border-bottom: 2px solid #e60012;
+    background: rgba(0, 0, 0, 0.92);
+    text-align: center;
+    animation: aparecer 0.7s ease-out;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.06);
+}
+
+h1 {
+    color: #fff;
+    font-size: 28px;
+}
+
+h2 {
+    color: #ff4050;
+    font-size: 24px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* LINKS E MENU */
+
+a {
+    color: #ff5663;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff9aa2;
+}
+
+nav {
+    padding: 16px;
+    background: rgba(25, 20, 22, 0.95);
+    text-align: center;
+    line-height: 2.5;
+}
+
+nav a {
+    display: inline-block;
+    margin: 0 4px;
+    padding: 4px 10px;
+    border-radius: 5px;
+    color: #fff;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+nav a:hover {
+    transform: translateY(-3px);
+    background-color: #e60012;
+    color: #fff;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #ff7883;
+    outline-offset: 3px;
+}
+
+/* CONTEÚDO */
+
+main {
+    width: min(1100px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 26px 0;
+    animation: subir 0.7s ease-out;
+}
+
+main section {
+    margin-bottom: 20px;
+    padding: 22px;
+    overflow-x: auto;
+    border: 1px solid #493137;
+    border-radius: 10px;
+    background: rgba(25, 22, 24, 0.96);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+main section:hover {
+    border-color: #e60012;
+    box-shadow: 0 0 18px rgba(230, 0, 18, 0.18);
+}
+
+main img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* TABELA DE PRODUTOS */
+
+table {
+    width: 100%;
+    min-width: 620px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #493137;
+    text-align: left;
+}
+
+th {
+    background: #64101b;
+    color: #fff;
+}
+
+tbody tr {
+    transition: background-color 0.25s ease;
+}
+
+tbody tr:hover {
+    background: #3a2026;
+}
+
+td img {
+    transition: transform 0.3s ease;
+}
+
+td img:hover {
+    transform: scale(1.06);
+}
+
+tfoot {
+    background: #292124;
+}
+
+/* FORMULÁRIO DE CADASTRO */
+
+form {
+    width: min(100%, 560px);
+    margin: 25px auto;
+    padding: 22px;
+    border: 1px solid #493137;
+    border-radius: 10px;
+    background: rgba(25, 22, 24, 0.97);
+}
+
+label {
+    color: #fff;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    max-width: 100%;
+    padding: 9px;
+    border: 1px solid #665159;
+    border-radius: 5px;
+    background: #100d0e;
+    color: #fff;
+    font: inherit;
+}
+
+form input:not([type="radio"]):not([type="checkbox"]),
+form select,
+form textarea {
+    width: 100%;
+    margin: 6px 0 10px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #ff5663;
+    outline-offset: 2px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #e60012;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    margin: 5px 5px 5px 0;
+    padding: 11px 20px;
+    border: 0;
+    border-radius: 5px;
+    background: #e60012;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    background: #b8000e;
+}
+
+/* RODAPÉ */
+
+footer {
+    padding: 20px;
+    border-top: 2px solid #e60012;
+    background: rgba(0, 0, 0, 0.95);
+    text-align: center;
+}
+
+/* ENTRADA DAS PÁGINAS */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes subir {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+    main {
+        width: calc(100% - 20px);
+    }
+
+    main section,
+    form {
+        padding: 16px;
+    }
+
+    nav a {
+        margin: 0;
+        padding: 4px 7px;
+    }
+}
+
+/* Respeita a configuração de reduzir movimentos */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
